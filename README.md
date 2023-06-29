@@ -2,7 +2,7 @@
 
 [Professional Certificate: C Programming with Linux](https://www.coursera.org/specializations/c-programming-linux)
 
-Dartmouth College (DartmouthX) & Institut Mines-Télécom (IMTx)
+Dartmouth College (Dartmouth) & Institut Mines-Télécom (IMT)
 
 
 Program summary:
