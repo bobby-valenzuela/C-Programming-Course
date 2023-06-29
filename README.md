@@ -14,11 +14,11 @@ Program summary:
 
 Curriculum:
 
-1.  C Programming: Getting Started (Dartmouth_IMTx - DART.IMT.C.01)
-2.  C Programming: Language Foundations (Dartmouth_IMTx - DART.IMT.C.02)
-3.  C Programming: Modular Programming and Memory Management (Dartmouth_IMTx - DART.IMT.C.03)
-4.  C Programming: Pointers and Memory Management (Dartmouth_IMTx - DART.IMT.C.04)
-5.  C Programming: Advanced Data Types (Dartmouth_IMTx - DART.IMT.C.05)
-6.  Linux Basics: The Command Line Interface (Dartmouth_IMTx - DART.IMT.C.06)
-7.  C Programming: Using Linux Tools and Libraries (Dartmouth_IMTx - DART.IMT.C.07)
+1.  C Programming: Getting Started
+2.  C Programming: Language Foundations
+3.  C Programming: Modular Programming and Memory Management
+4.  C Programming: Pointers and Memory Management
+5.  C Programming: Advanced Data Types
+6.  Linux Basics: The Command Line Interface
+7.  C Programming: Using Linux Tools and Libraries
 
