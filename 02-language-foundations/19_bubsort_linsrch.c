@@ -11,41 +11,37 @@
 #include <stdio.h>
 
 int main(void) {
-  char word[50];
-  char swap;
-  int i, j;
-  int len = 0;
-  int numRepeats = 0;
+    char word[51];
+    char swap;
+    int i, j;
+    int len = 0;
+    int numRepeats = 0;
+
+    scanf("%s", word);
+    while (word[len] != '\0') len++;
   
-  scanf("%s", word);
-  
-  //TODO combine sort and len() with while loop
-  // get word length
-  while (word[len] != '\0') {
-    len++;
+    // bubble sort
+    for (i=0; i<len; i++) {
+        for (j=0; j<len-1; j++) {
+            if (word[j] > word[j+1]) {
+                swap = word[j+1];
+                word[j+1] = word[j];
+                word[j] = swap;
+            }       
+        }
   }
   
-  // bubble sort
-  for (i=0; i<len; i++) {
-    for (j=0; j<len-1; j++) {
-      if (word[j] > word[j+1]) {
-        swap = word[j+1];
-        word[j+1] = word[j];
-        word[j] = swap;
-      }       
+    // Count dups
+    for (i=0; i<len-1; i++) {
+        if (word[i] == word[i+1]) {
+            // Count dup
+            numRepeats++;
+            
+            // Now that we counted on dup, skip additional dups
+            while (word[i] == word[i+1]) i++;
+        }
     }
-  }
-  
-  //TODO clean up this loop & condition
-  for (i=0; i<len-1; i++) {
-    if (word[i] == word[i+1]) {
-      numRepeats++;
-      while (word[i] == word[i+1]) {
-        i++;
-      }
-    }
-  }
-  
+
   printf("%d\n", numRepeats);
   
   return 0;
