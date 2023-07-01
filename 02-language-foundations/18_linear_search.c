@@ -10,31 +10,28 @@
 #include <stdio.h>
 
 int main(void) {
-  char word[51];
-  char uppT = 'T';
-  char lowT = 't';
-  int i = 0;
-  int tIdx = -1;
-  
-  scanf("%s", word);
-  
-  while (word[i] != '\0') {
-    // only check for 'T' or 't' until one is found
-    if (tIdx == -1) {
-      if (word[i] == uppT || word[i] == lowT) {
-        tIdx = i;
-      }     
+
+    char uppT = 'T', lowT = 't';
+    int i = 0, tIdx = -1;
+    char word[51];
+    
+    scanf("%s", word);
+
+    // only check for 'T' or 't' until one is found  
+    while (word[i] != '\0' && tIdx == -1) {
+        if (word[i] == uppT || word[i] == lowT) tIdx = i;
+        i++;
     }
-    i++;
-  }
+    
+    if (tIdx == -1) {
+        printf("%d\n", tIdx);
+    }
+    else if (i % 2 != 0 && tIdx <= (i/2)+1 ) {  // check if in first half ("found" and is before than halway point)
+        printf("%d\n", 1);
+    } 
+    else {
+        printf("%d\n", 2);
+    }
   
-  if (tIdx == -1) {
-    printf("%d\n", tIdx);
-  }else if (tIdx <= i/2) {
-    printf("%d\n", 1);
-  } else {
-    printf("%d\n", 2);
-  }
-  
-  return 0;
+    return 0;
 }
