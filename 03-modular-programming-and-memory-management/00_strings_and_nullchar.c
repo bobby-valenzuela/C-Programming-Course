@@ -1,5 +1,5 @@
 /*
-A quick demo I thew together just to show that
+A quick demo I thew together just to show how the null char operates within the context of a string.
 */
 
 #include <stdio.h>
