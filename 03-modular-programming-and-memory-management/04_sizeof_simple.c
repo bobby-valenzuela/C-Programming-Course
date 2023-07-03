@@ -16,29 +16,30 @@
 #include <stdio.h>
 
 int main(void) {
-  int numCodes, lenCode, i;
-  int totalBytes = 0;
-  char codeType;
-  char intCode = 'i';
-  char doubCode = 'd';
-  char charCode = 'c';
+    int numCodes, lenCode, i;
+    int totalBytes = 0;
+    char codeType;
+
+    scanf("%d", &numCodes);
   
-  scanf("%d", &numCodes);
-  
-  for (i=0; i<numCodes; i++) {
-    scanf("%d %c", &lenCode, &codeType);
-    if (codeType == intCode) {
-      totalBytes += sizeof(int) * lenCode;
-    } else if (codeType == doubCode) {
-      totalBytes += sizeof(double) * lenCode;
-    } else if (codeType == charCode) {
-      totalBytes += sizeof(char) * lenCode;
-    } else {
-      printf("Invalid tracking code type.\n");
-      return 0;
+    for (i=0; i<numCodes; i++) {
+        scanf("%d %c", &lenCode, &codeType);
+
+        if (codeType == 'i') {      // int
+            totalBytes += sizeof(int) * lenCode;
+        } 
+        else if (codeType == 'd') { // double
+            totalBytes += sizeof(double) * lenCode;
+        }    
+        else if (codeType == 'c') { // char
+            totalBytes += sizeof(char) * lenCode;
+        } 
+        else {
+            printf("Invalid tracking code type.\n");
+            return 0;
+        }
     }
-  }
   
-  printf("%d bytes\n", totalBytes);
-  return 0;
+    printf("%d bytes\n", totalBytes);
+    return 0;
 }
