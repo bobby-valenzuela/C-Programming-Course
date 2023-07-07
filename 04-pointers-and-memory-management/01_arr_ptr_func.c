@@ -35,17 +35,12 @@ int main(void) {
 
 /* Write your function behind() here: */
 
-void behind(int *ptr, int numPlayer) {
-    int i;
-    int max = ptr[0];
-
-    for (i=1; i<numPlayer; i++) {
-        if (ptr[i] > max) {
-            max = ptr[i];
-        }
-    }
-
-    for (i=0; i<numPlayer; i++) {
-        ptr[i] = max - ptr[i]; 
-    }
+void behind(int * arr, int numPlayers){
+    
+    int i, max = arr[0];
+    // Find max
+    for(i=0; i< numPlayers;i++) if(arr[i] > max) max = arr[i];
+    // Update array
+    for(i=0; i< numPlayers;i++) arr[i]=max-arr[i];
+    
 }
