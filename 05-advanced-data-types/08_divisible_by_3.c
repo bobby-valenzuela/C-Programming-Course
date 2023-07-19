@@ -91,35 +91,33 @@ struct digit *readNumber(void) {
 
 // Write your divisibleByThree() function here
 int divisibleByThree(struct digit * start) {
-  struct digit * ptr = start;
-  int numReverse = 0;
-  int numLen = 0;
-  int num = 0;
-  int i;
-  
-  while (ptr!=NULL) {
-    // multiples of 10 will reconstruct number in reverse
-    numReverse += (ptr->num)*(powerOfTen(numLen));
-    numLen++;
-    ptr = ptr->next;
-  }
-  
-  // restore number using modulo arithmetic & powers of 10
-  for (i=0; i<numLen; i++) {
-    num += (numReverse%(powerOfTen(i))) * (powerOfTen(numLen-i));
-  }
-  
-  if (num%3 == 0) {
-    return 1;
-  }
-  
-  return 0;
-}
+    struct digit * ptr = start;
+    int i = 0;
+    // Get num length
+    while (ptr!=NULL) {
+        ptr = ptr->next;
+        i++;
+    }
+    // printf("ArrLength: %d\n",i);
+    char intasstring[i+1];
+    i = 0;
+    while (start!=NULL) {
+        // printf("Num: %d\n",start->num);
+        intasstring[i]=(char)start->num + '0'; // convert int to char and save
+        start = start->next;
+        i++;
+    }
+    intasstring[i+1]='\0';
+    // printf("STR: %s\n",intasstring);
 
-int powerOfTen(int power) {
-    if (power == 0) {
+    // Convert char to int
+    int fullNum = atoi(intasstring);
+
+    //  printf("num : %d ",fullNum);
+    if ((fullNum%3) == 0) {
         return 1;
     }
-    
-    return 10 * (powerOfTen(power - 1));
+    else{
+        return 0;
+    }
 }
