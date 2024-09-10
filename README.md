@@ -1,4 +1,4 @@
-# C-Programming-with-Linux
+# C-Programming-with-Linux (course challenges)
 
 [Professional Certificate: C Programming with Linux](https://www.coursera.org/specializations/c-programming-linux)
 
