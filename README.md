@@ -22,3 +22,6 @@ Curriculum:
 6.  Linux Basics: The Command Line Interface
 7.  C Programming: Using Linux Tools and Libraries
 
+<br />
+
+Added `dir_lister.c` program as a mini-project after completing the course.  
