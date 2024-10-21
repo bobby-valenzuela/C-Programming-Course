@@ -24,4 +24,3 @@ Curriculum:
 
 <br />
 
-Added `dir_lister.c` program as a mini-project after completing the course.  
